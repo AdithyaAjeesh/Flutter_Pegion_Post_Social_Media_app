@@ -47,7 +47,14 @@ class SignUpScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  provider.registerUser(
+                    context,
+                    provider.userNameController.text.trim(),
+                    provider.emailController.text.trim(),
+                    provider.passWordController.text.trim(),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                 ),

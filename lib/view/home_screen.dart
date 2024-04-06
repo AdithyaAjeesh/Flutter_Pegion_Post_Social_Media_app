@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBarWidgetPref(context),
       endDrawer: const DrawerWidget(),
+      body: Center(),
     );
   }
 }

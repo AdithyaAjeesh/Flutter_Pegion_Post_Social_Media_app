@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/controller/functions_provider.dart';
 import 'package:provider/provider.dart';
 
-import 'widgets/text_widgets.dart';
+import '../widgets/text_widgets.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

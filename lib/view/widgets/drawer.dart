@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/controller/functions_provider.dart';
+import 'package:flutter_social_media_pegion_post_app/view/all_users_screen.dart';
 import 'package:provider/provider.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -17,8 +18,11 @@ class DrawerWidget extends StatelessWidget {
         children: [
           DrawerTile(
             icon: Icons.abc,
-            name: 'Item',
-            ontap: () {},
+            name: 'View All Users',
+            ontap: () {
+              Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => AllUserScreen()));
+            },
           ),
           DrawerTile(
             icon: Icons.abc,

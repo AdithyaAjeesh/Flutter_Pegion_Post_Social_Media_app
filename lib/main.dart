@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/controller/functions_provider.dart';
-import 'package:flutter_social_media_pegion_post_app/view/splash_screen.dart';
+import 'package:flutter_social_media_pegion_post_app/view/start_up_pages/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
