@@ -5,12 +5,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/view/home_screen.dart';
 import 'package:flutter_social_media_pegion_post_app/view/login_screen.dart';
+import 'package:flutter_social_media_pegion_post_app/view/signup_screen.dart';
 import 'package:flutter_social_media_pegion_post_app/view/splash_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class FunctionProvider extends ChangeNotifier {
   final TextEditingController userNameController = TextEditingController();
   final TextEditingController passWordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
 
   Future<void> LoginFunction(context) async {
     String userName = userNameController.text.trim();
@@ -23,6 +25,8 @@ class FunctionProvider extends ChangeNotifier {
           builder: (context) => const HomeScreen(),
         ),
       );
+      userNameController.clear();
+      passWordController.clear();
     }
   }
 
@@ -43,9 +47,21 @@ class FunctionProvider extends ChangeNotifier {
       });
     }
   }
-  Future<void> logoutFunction(context)async{
+
+  Future<void> logoutFunction(context) async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     preferences.setBool('key', false);
-    Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const SplashScreen()));
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const SplashScreen()));
+  }
+
+  void goToSignUpScreen(context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const SignUpScreen()));
+  }
+
+  void goToLoginScreen(context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const LoginScreen()));
   }
 }

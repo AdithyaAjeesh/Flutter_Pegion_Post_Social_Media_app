@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 Widget LoginTextFeild({
   required String hintText,
   required TextEditingController controller,
+  required IconData icon,
 }) =>
     Container(
       margin: const EdgeInsets.all(15),
@@ -15,6 +16,10 @@ Widget LoginTextFeild({
           color: Colors.white,
         ),
         decoration: InputDecoration(
+          prefixIcon: Icon(
+            icon,
+            color: Colors.white,
+          ),
           hintText: hintText,
           hintStyle: const TextStyle(
             fontWeight: FontWeight.bold,
