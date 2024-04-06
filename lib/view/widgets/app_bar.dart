@@ -33,8 +33,8 @@ class AppBarWidget extends StatelessWidget {
             height: 50,
             padding: const EdgeInsets.all(5),
             decoration: const BoxDecoration(
-              color: Colors.black,
-            ),
+                color: Colors.black,
+                borderRadius: BorderRadius.all(Radius.circular(10))),
             child: const Text(
               'Post',
               style: TextStyle(
@@ -46,7 +46,6 @@ class AppBarWidget extends StatelessWidget {
           )
         ],
       ),
-      
     );
   }
 }

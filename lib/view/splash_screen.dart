@@ -27,7 +27,8 @@ class SplashScreen extends StatelessWidget {
               padding: const EdgeInsets.all(5),
               decoration: const BoxDecoration(
                 color: Colors.black,
-              ),
+                borderRadius: BorderRadius.all(Radius.circular(10))
+              ),    
               child: const Text(
                 'Post',
                 style: TextStyle(
