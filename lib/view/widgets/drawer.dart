@@ -21,7 +21,7 @@ class DrawerWidget extends StatelessWidget {
             name: 'View All Users',
             ontap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => AllUserScreen()));
+                  MaterialPageRoute(builder: (context) => const AllUserScreen()));
             },
           ),
           DrawerTile(

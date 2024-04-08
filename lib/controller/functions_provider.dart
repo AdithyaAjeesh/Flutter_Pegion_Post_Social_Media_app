@@ -18,6 +18,7 @@ class FunctionProvider extends ChangeNotifier {
   Future<void> LoginFunction(context) async {
     String userName = userNameController.text.trim();
     String passWord = passWordController.text.trim();
+
     if (userName == '123' && passWord == '123') {
       SharedPreferences preferences = await SharedPreferences.getInstance();
       preferences.setBool('key', true);
@@ -86,7 +87,6 @@ class FunctionProvider extends ChangeNotifier {
         headers: <String, String>{'Content-Type': 'application/json'},
         body: jsonBody,
       );
-
       if (response.statusCode == 200) {
         print('User registration successful');
       } else {
