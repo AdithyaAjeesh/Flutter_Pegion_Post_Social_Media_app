@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/controller/functions_provider.dart';
+import 'package:flutter_social_media_pegion_post_app/view/users_detailed_screen.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
@@ -31,7 +32,16 @@ class AllUserScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 var user = snapshot.data![index];
                 return GestureDetector(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => UsersDetailed(
+                          userName: user['username'],
+                          userEmail: user['email'],
+                        ),
+                      ),
+                    );
+                  },
                   child: Container(
                     decoration: BoxDecoration(
                       color: Colors.black.withOpacity(0.8),
