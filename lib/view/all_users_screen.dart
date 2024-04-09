@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/controller/functions_provider.dart';
+import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
 class AllUserScreen extends StatelessWidget {
@@ -16,7 +17,12 @@ class AllUserScreen extends StatelessWidget {
         future: provider.fetchAllUsers(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            return const Center(child: CircularProgressIndicator());
+            return Center(
+              child: Lottie.asset(
+                'assets/Animation - 1712635468572.json',
+                height: 80,
+              ),
+            );
           } else if (snapshot.hasError) {
             return Center(child: Text('Error: ${snapshot.error}'));
           } else {
@@ -24,20 +30,36 @@ class AllUserScreen extends StatelessWidget {
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
                 var user = snapshot.data![index];
-                return Container(
-                  decoration: const BoxDecoration(
-                    color: Colors.redAccent,
-                  ),
-                  margin: const EdgeInsets.all(15),
-                  height: 150,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Text(user['username'] ?? 'null'),
-                      Text(user['email'] ?? 'null'),
-                      Text(user['password'] ?? 'null'),
-                      Text(user['_id'] ?? 'null'),
-                    ],
+                return GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.black.withOpacity(0.8),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                    margin: const EdgeInsets.all(15),
+                    height: 100,
+                    child: Container(
+                      margin: const EdgeInsets.only(left: 15),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            user['username'] ?? 'null',
+                            style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 );
               },

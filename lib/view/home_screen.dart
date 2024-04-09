@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_social_media_pegion_post_app/view/widgets/app_bar.dart';
 import 'package:flutter_social_media_pegion_post_app/view/widgets/drawer.dart';
+import 'package:lottie/lottie.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,7 +11,10 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBarWidgetPref(context),
       endDrawer: const DrawerWidget(),
-      body: const Center(),
+      body: Center(
+        child:
+            Lottie.asset('assets/Animation - 1712635468572.json', height: 80),
+      ),
     );
   }
 }

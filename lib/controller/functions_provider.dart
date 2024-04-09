@@ -87,7 +87,7 @@ class FunctionProvider extends ChangeNotifier {
         headers: <String, String>{'Content-Type': 'application/json'},
         body: jsonBody,
       );
-      if (response.statusCode == 200) {
+      if (response.statusCode == 201) {
         print('User registration successful');
       } else {
         print('Failed to register user');
@@ -95,6 +95,10 @@ class FunctionProvider extends ChangeNotifier {
     } catch (e) {
       print('Error registering user: $e');
     }
+    userNameController.clear();
+    passWordController.clear();
+    emailController.clear();
+    Navigator.of(context).pop();
   }
 
   Future<List<Map<String, dynamic>>> fetchAllUsers() async {

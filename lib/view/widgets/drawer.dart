@@ -17,11 +17,14 @@ class DrawerWidget extends StatelessWidget {
       child: ListView(
         children: [
           DrawerTile(
-            icon: Icons.abc,
+            icon: Icons.verified_user,
             name: 'View All Users',
             ontap: () {
               Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const AllUserScreen()));
+                MaterialPageRoute(
+                  builder: (context) => const AllUserScreen(),
+                ),
+              );
             },
           ),
           DrawerTile(
