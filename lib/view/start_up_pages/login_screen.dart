@@ -30,12 +30,12 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              LoginTextFeild(
+              TextFeildWidget1(
                 hintText: 'Enter UserName',
                 controller: provider.userNameController,
                 icon: Icons.person,
               ),
-              LoginTextFeild(
+              TextFeildWidget1(
                 hintText: 'Enter PassWord',
                 controller: provider.passWordController,
                 icon: Icons.verified_user,

@@ -30,17 +30,17 @@ class SignUpScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              LoginTextFeild(
+              TextFeildWidget1(
                 hintText: 'Enter UserName',
                 controller: provider.userNameController,
                 icon: Icons.person,
               ),
-              LoginTextFeild(
+              TextFeildWidget1(
                 hintText: 'Enter Email',
                 controller: provider.emailController,
                 icon: Icons.email,
               ),
-              LoginTextFeild(
+              TextFeildWidget1(
                 hintText: 'Enter Password',
                 controller: provider.passWordController,
                 icon: Icons.lock,

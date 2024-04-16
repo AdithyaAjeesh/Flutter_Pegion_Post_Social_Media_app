@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-Widget LoginTextFeild({
+Widget TextFeildWidget1({
   required String hintText,
   required TextEditingController controller,
   required IconData icon,

@@ -13,10 +13,15 @@ class UsersDetailed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
+        backgroundColor: Colors.black.withOpacity(0.8),
         title: Text(
           '${userName}s Profile',
           style: const TextStyle(
             fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
       ),
