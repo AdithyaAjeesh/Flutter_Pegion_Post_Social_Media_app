@@ -12,8 +12,10 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBarWidgetPref(context),
       endDrawer: const DrawerWidget(),
       body: Center(
-        child:
-            Lottie.asset('assets/Animation - 1712635468572.json', height: 80),
+        child: Lottie.asset(
+          'assets/Animation - 1712635468572.json',
+          height: 80,
+        ),
       ),
     );
   }

@@ -18,7 +18,7 @@ class UsersDetailed extends StatelessWidget {
         ),
         backgroundColor: Colors.black.withOpacity(0.8),
         title: Text(
-          '${userName}s Profile',
+          "${userName} ' s Profile",
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             color: Colors.white,
